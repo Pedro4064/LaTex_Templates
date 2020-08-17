@@ -1,0 +1,64 @@
+{
+	// Place your snippets for latex here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Center title vertically": {
+		"prefix": "Center Title",
+		"body": [
+			"\\\\usepackage{titling}",
+			"\\\\renewcommand\\\\maketitlehooka{\\\\null\\\\mbox{}\\\\vfill}",
+			"\\\\renewcommand\\\\maketitlehookd{\\\\vfill\\\\null}"
+		],
+		"description": "Center the title, author and data in the middle of the cover page"
+	},
+
+	"Insert Background Image": {
+		"prefix" : "Background Image",
+		"body": [
+			"\\\\usepackage[pages=all]{background}",
+			"\\\\backgroundsetup{",
+			"\tscale=1,",
+			"\tcolor=black,",
+			"\tanchor=below,",
+			"\tposition={$1,$2},",
+			"\topacity=${3:1},",
+			"\tangle=0,",
+			"\tcontents={%",
+			"\t\t\\\\includegraphics[height=150mm]{${4:/Users/pedrocruz/Desktop/Mecatron_Side.png}}",
+			"\t}%",
+			"}"
+		]
+	},
+
+	"Create Names Table" : {
+		"prefix": "Teammates' Names Table",
+		"body": [
+			"\\\\begin{table}[h]",
+        		"\t\\\\begin{flushleft}",
+            		"\t\t\\\\begin{tabular}{ll}",
+                
+                		"\t\t\tNome: & Ra: \\\\\\\\ ",
+                
+               			 "\t\t\tPedro Henrique L. da Cruz & 215663 \\\\\\\\ ",
+               			 "\t\t\tSer Humano 1 & 23054\\\\\\\\",
+               			 "\t\t\tSer Humano 2 & 20000",
+                
+            		"\t\t\\\\end{tabular}",
+       			 "\t\\\\end{flushleft}",
+   			"\\\\end{table}",
+		]
+	},
+
+	"Create new frame":{
+
+		"prefix": "frame",
+		"body": [
+			"\\\\begin{frame}[t] \\\\vspace{10pt}",
+			"\t\\\\section{${1:Section Title}}",
+			"\\\\end{frame}"
+		]
+	}
+
+}
