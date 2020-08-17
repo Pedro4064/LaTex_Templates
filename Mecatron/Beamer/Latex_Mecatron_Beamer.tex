@@ -1,0 +1,45 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+
+%%%%%%%%% Beamer Theme SetUp %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usetheme{metropolis}
+\useoutertheme{metropolis} 
+\useinnertheme{metropolis}
+\usecolortheme{spruce}
+\setbeamertemplate{section in toc}{• \inserttocsection}
+
+%%%%%%%%% Packages and backgroud Image setup %%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[pages=all]{background}
+\backgroundsetup{
+    scale=1,
+    color=black,
+    anchor=below,
+    position={7.3,-3.6},
+    opacity=0.5,
+    angle=0,
+    contents={%
+        \includegraphics[width=0.5\paperwidth, height= 0.5\paperheight]{/Users/pedrocruz/Documents/LaTex/Mecatron/img/Screen Shot 2020-08-15 at 7.51.37 PM.png}
+    }%
+}
+\usebackgroundtemplate{}
+
+%%%%%%%%% This presentation's specific infos %%%%%%%%%%
+\newcommand{\projectName}{Reciclatron}
+\title{Title for the presentation}
+\date{}
+\author[]{}
+\institute[]{\textbf{\projectName}}
+
+
+\begin{document}
+	
+	\begin{frame}[t]
+		\titlepage
+	\end{frame}
+    
+    \begin{frame}
+        \tableofcontents{}
+    \end{frame}
+
+\end{document}
