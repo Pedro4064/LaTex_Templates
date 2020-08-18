@@ -1,4 +1,4 @@
-\documentclass[xcolor=dvipsnames]{beamer}
+\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer}
 
 %%%%%%%%% Beamer Theme SetUp %%%%%%%%%%%%%%%%%%%%%%%%%%
 \usetheme{metropolis}
@@ -6,6 +6,8 @@
 \useinnertheme{metropolis}
 \usecolortheme{spruce}
 \setbeamertemplate{section in toc}{• \inserttocsection}
+\setlength{\abovecaptionskip}{-80pt plus 3pt minus 2pt} % Chosen fairly arbitrarily
+
 
 %%%%%%%%% Packages and backgroud Image setup %%%%%%%%%
 \usepackage{graphicx}
@@ -15,18 +17,19 @@
     scale=1,
     color=black,
     anchor=below,
-    position={7.3,-3.6},
+    position={10.5,-3.2},
     opacity=0.5,
     angle=0,
     contents={%
-        \includegraphics[width=0.5\paperwidth, height= 0.5\paperheight]{/Users/pedrocruz/Documents/LaTex/Mecatron/img/Screen Shot 2020-08-15 at 7.51.37 PM.png}
+        \includegraphics[width=0.4\paperwidth, height= 0.5\paperheight]{/Users/pedrocruz/Documents/LaTex/Mecatron/img/Screen Shot 2020-08-15 at 7.51.37 PM.png}
     }%
 }
 \usebackgroundtemplate{}
 
 %%%%%%%%% This presentation's specific infos %%%%%%%%%%
-\newcommand{\projectName}{Reciclatron}
-\title{Title for the presentation}
+\newcommand{\projectName}{Name of the Project}
+\title{Title of the Presentation}
+\subtitle{Subtitle}
 \date{}
 \author[]{}
 \institute[]{\textbf{\projectName}}
