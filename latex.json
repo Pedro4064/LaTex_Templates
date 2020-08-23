@@ -59,6 +59,19 @@
 			"\t\\\\section{${1:Section Title}}",
 			"\\\\end{frame}"
 		]
+	},
+
+	"Clickable T.O.C and Hyperlinks":{
+		"prefix": "Clickable TOC",
+		"body": [
+			"\\\\usepackage{hyperref}",
+			"\\\\hypersetup{",
+			"\tcolorlinks=true,",
+			"\tlinkcolor=black,", 
+			"\tfilecolor=magenta,", 
+			"\turlcolor=cyan,", 
+			"}"
+		]
 	}
 
 }
