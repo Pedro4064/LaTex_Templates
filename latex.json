@@ -13,9 +13,16 @@
 		],
 		"description": "Center the title, author and data in the middle of the cover page"
 	},
-
+	"Center title on top of page": {
+		"prefix": "Top Title",
+		"body": [
+			"\\\\usepackage{titling}",
+			"\\\\setlength{\\\\droptitle}{-5em}"
+		],
+		"description": "Center the title, author and data in the top middle of the cover page"
+	},
 	"Insert Background Image": {
-		"prefix" : "Background Image",
+		"prefix": "Background Image",
 		"body": [
 			"\\\\usepackage[pages=all]{background}",
 			"\\\\backgroundsetup{",
@@ -31,28 +38,22 @@
 			"}"
 		]
 	},
-
-	"Create Names Table" : {
+	"Create Names Table": {
 		"prefix": "Teammates' Names Table",
 		"body": [
 			"\\\\begin{table}[h]",
-        		"\t\\\\begin{flushleft}",
-            		"\t\t\\\\begin{tabular}{ll}",
-                
-                		"\t\t\tNome: & Ra: \\\\\\\\ ",
-                
-               			 "\t\t\tPedro Henrique L. da Cruz & 215663 \\\\\\\\ ",
-               			 "\t\t\tSer Humano 1 & 23054\\\\\\\\",
-               			 "\t\t\tSer Humano 2 & 20000",
-                
-            		"\t\t\\\\end{tabular}",
-       			 "\t\\\\end{flushleft}",
-   			"\\\\end{table}",
+			"\t\\\\begin{flushleft}",
+			"\t\t\\\\begin{tabular}{ll}",
+			"\t\t\tNome: & Ra: \\\\\\\\ ",
+			"\t\t\tPedro Henrique L. da Cruz & 215663 \\\\\\\\ ",
+			"\t\t\tSer Humano 1 & 23054\\\\\\\\",
+			"\t\t\tSer Humano 2 & 20000",
+			"\t\t\\\\end{tabular}",
+			"\t\\\\end{flushleft}",
+			"\\\\end{table}",
 		]
 	},
-
-	"Create new frame":{
-
+	"Create new frame": {
 		"prefix": "frame",
 		"body": [
 			"\\\\begin{frame}[t] \\\\vspace{10pt}",
@@ -60,18 +61,34 @@
 			"\\\\end{frame}"
 		]
 	},
-
-	"Clickable T.O.C and Hyperlinks":{
+	"Clickable T.O.C and Hyperlinks": {
 		"prefix": "Clickable TOC",
 		"body": [
 			"\\\\usepackage{hyperref}",
 			"\\\\hypersetup{",
 			"\tcolorlinks=true,",
-			"\tlinkcolor=black,", 
-			"\tfilecolor=magenta,", 
-			"\turlcolor=cyan,", 
+			"\tlinkcolor=black,",
+			"\tfilecolor=magenta,",
+			"\turlcolor=cyan,",
 			"}"
 		]
+	},
+	"Side-by-side Image": {
+		"prefix": "side-by-side",
+		"body": [
+			"\\\\begin{figure}[h]",
+			"\t\\\\begin{subfigure}{0.5\\\\textwidth}",
+			"\t\t\\\\centering",
+			"\t\t\\\\includegraphics[width=.4\\\\linewidth]{$1}",
+			"\t\t\\\\caption[$2]{$2}",
+			"\t\\\\end{subfigure}% Really important to have this comment here and no black line",
+			"\\\\begin{subfigure}{.5\\\\textwidth}",
+			"\t\\\\centering",
+			"\t\t\\\\includegraphics[width=.4\\\\linewidth]{$3}",
+			"\t\t\\\\caption[$4]{$4}",
+			"\t\\\\end{subfigure}",
+			"\t\\\\caption[$5]{$5}",
+			"\\\\end{figure}"
+		]
 	}
-
 }
